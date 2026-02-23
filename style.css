@@ -1,0 +1,67 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #000;
+    overflow: hidden;
+    /* Ẩn thanh cuộn */
+}
+
+canvas {
+    top: 50;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Animations */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+#pinkboard {
+    animation: heartbeat 1.5s infinite;
+}
+
+.box {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Các kiểu dáng cho điện thoại di động */
+@media only screen and (max-width: 768px) {
+    .box {
+        width: 90%;
+        /* Giảm chiều rộng cho màn hình nhỏ */
+        height: 90%;
+        /* Giảm chiều cao cho màn hình nhỏ */
+    }
+
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Các kiểu dáng cho điện thoại rất nhỏ (dưới 480px) */
+@media only screen and (max-width: 480px) {
+    .box {
+        width: 90%;
+        height: 90%;
+    }
+
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+}
