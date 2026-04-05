@@ -308,7 +308,7 @@ var ParticlePool = (function () {
       spawnParticle(posy, diry);
     }
 
-    s
+    // update and draw particles
     particles.update(deltaTime);
     particles.draw(context, image);
   }
