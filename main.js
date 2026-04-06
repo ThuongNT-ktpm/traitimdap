@@ -240,13 +240,9 @@ var ParticlePool = (function () {
     timeRunning += deltaTime;
 
     var zoom = Math.min(canvas.width / 700, 1);
-    var offsetY = 0;
-    // Điều chỉnh kích thước và vị trí xê xuống 1 chút cho cân đối trên mobile
+    // Tren mobile thu nho de vua man hinh
     if (canvas.width <= 768) {
-      zoom = zoom * 0.7; // Tăng kích thước một chút trên mobile
-      offsetY = canvas.height * 0.1; // Đẩy xuống 10% chiều cao tương ứng với mobile
-    } else {
-      offsetY = canvas.height * 0.05;
+      zoom = zoom * 0.75;
     }
 
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -283,12 +279,12 @@ var ParticlePool = (function () {
         var vy = dir.y;
         var D = 200 * zoom;
         var spawnX = (canvas.width / 2 + px) - (vx / (settings.particles.velocity * zoom)) * D;
-        var spawnY = (canvas.height / 2 - py + offsetY) - (vy / (settings.particles.velocity * zoom)) * D;
+        var spawnY = (canvas.height / 2 - py) - (vy / (settings.particles.velocity * zoom)) * D;
         particles.add(spawnX, spawnY, vx, vy);
       } else {
         particles.add(
           canvas.width / 2 + px,
-          canvas.height / 2 - py + offsetY,
+          canvas.height / 2 - py,
           dir.x,
           -dir.y
         );
