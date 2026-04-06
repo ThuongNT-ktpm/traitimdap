@@ -117,42 +117,44 @@ canvas {
 .letter-content {
     background: #fff5f8;
     color: #d81b60;
-    padding: 30px;
+    padding: 20px 18px;
     border-radius: 15px;
-    width: 90%;
-    max-width: 450px;
-    max-height: 85vh;
+    width: 88%;
+    max-width: 380px;
+    max-height: 78vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     position: relative;
     font-family: 'Dancing Script', cursive;
     text-align: left;
     box-shadow: 0 0 20px rgba(255, 52, 144, 0.5);
-    font-size: 22px;
+    font-size: 18px;
     animation: openLetter 0.5s ease-out forwards;
+    box-sizing: border-box;
 }
 
 .letter-content h2 {
     margin-top: 0;
-    font-size: 32px;
+    font-size: 24px;
     border-bottom: 2px dashed #ff8ab3;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     color: #ff3490;
     text-align: center;
 }
 
 .letter-content p {
-    line-height: 1.5;
-    margin: 10px 0;
-    font-size: 20px;
-    text-indent: 15px;
+    line-height: 1.4;
+    margin: 7px 0;
+    font-size: 16px;
+    text-indent: 12px;
     text-align: justify;
 }
 
 .signature {
-    margin-top: 25px;
+    margin-top: 15px;
     font-weight: bold;
     text-align: right;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #close-letter {
@@ -182,7 +184,7 @@ canvas {
 }
 
 .letter-image img {
-    width: 90px;
+    width: 65px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
